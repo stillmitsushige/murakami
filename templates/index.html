@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>村上ショージ判定機</title>
+</head>
+<body>
+    <h1>村上ショージを知っているかどうかによってあなたのお笑いカルチャー理解度を判定します</h1>
+    <form action="/" method="POST">
+        <input type="radio" name="choice" value="know" {{ checked_know }}> 村上ショージを知っている<br>
+        <input type="radio" name="choice" value="not_know" {{ checked_not_know }}> 村上ショージを知らない<br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+    <h1>{{ result }}</h1>
+    {% endif %}
+</body>
+</html>
